@@ -22,17 +22,15 @@ describe Game do
     expect(game1.current_turn).to eq 'x'
   end
 
-  it 'prints current board places occupied by game after each move' do
-    allow(game).to receive(:current_turn) {'o'}
-    game.move('a3')
-    game.move('c1')
-    expect(game.board).to eq ["a1", "a2", "o", "b1", "b2", "b3", "x", "c2", "c3"]
+  it 'can show current board places after move' do
+    game1 = double
+    allow(game1).to receive(:move)
+    allow(game1).to receive(:board) {["a1", "a2", "o", "b1", "b2", "b3", "x", "c2", "c3"]}
+    game1.move('a3')
+    game1.move('c1')
+    expect(game1.board).to eq ["a1", "a2", "o", "b1", "b2", "b3", "x", "c2", "c3"]
   end
 
-  it 'can move' do
-    game.move('a1')
-    # expect(game.board).to eq ['a1']
-  end
 
   it 'can not move if not within the board' do
     expect {game.move('d4')}.to raise_error(RuntimeError, 'Move error')
