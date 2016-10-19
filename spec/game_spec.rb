@@ -47,9 +47,10 @@ describe Game do
   end
 
   it 'can be won' do
-    p game.board
     game.move('c1')
+    game.move('b1')
     game.move('c2')
-    expect(game.move('c3')).to eq 'game won'
+    game.move('b2')
+    expect(game.move('c3')).to eq 'x won'
   end
 end
