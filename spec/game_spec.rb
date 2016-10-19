@@ -8,6 +8,6 @@ describe Game do
   end
 
   it 'can choose a player to go first' do
-    expect(game.first_turn).to eq x or o
+    expect(game.first_turn).to eq 'x goes first'
   end
 end

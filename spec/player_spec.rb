@@ -1,7 +1,7 @@
 require 'player'
 
 describe Player do
-  subject(:player) {described_class.new}
+  subject(:player) {described_class.new('name')}
   it 'can move' do
     player.move('a1')
     expect(player.moves).to eq ['a1']
