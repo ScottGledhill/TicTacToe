@@ -1,10 +1,7 @@
-# TicTacToe
+## Practice Tech Test
 
-Try our Tic Tac Toe Tech Test!
+# The task
 
-This is a very common tech test as it demonstrates a candidate's knowledge of basic data structures.
-
-The brief
 
 The rules of tic-tac-toe are as follows:
 
@@ -15,4 +12,18 @@ A turn ends when a player claims a field
 A player wins if they claim all the fields in a row, column or diagonal
 A game is over if a player wins
 A game is over when all fields are taken
-Build the business logic for a game of tic tac toe. It should be easy to implement a working game of tic tac toe by combining your code with any user interface, whether web or command line.
+
+
+# Run it 
+
+[Download](https://www.ruby-lang.org/en/downloads/) and install ruby if you don't already have it installed.
+
+Clone repo from git@github.com:ScottGledhill/TicTacToe.git
+
+Enter project file;
+
+Run Rspec to see tests
+
+See Demo for game play
+
+[Scott Gledhill](https://github.com/ScottGledhill)
