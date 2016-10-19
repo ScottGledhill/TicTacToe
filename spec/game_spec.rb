@@ -9,12 +9,14 @@ describe Game do
 
   it 'can choose a player to go first' do
     game1 = double
-    allow(game1).to receive(:first_turn) {'x goes first'}
-    expect(game1.first_turn).to eq 'x goes first'
+    allow(game1).to receive(:first_turn) {'x'}
+    expect(game1.first_turn).to eq 'x'
   end
 
   it 'can rotate turns between players' do
     game.rotate_turn
-    expect(game.current_turn).to eq x
+    expect(game.current_turn).to eq 'o'
+    game.rotate_turn
+    expect(game.current_turn).to eq 'x'
   end
 end
