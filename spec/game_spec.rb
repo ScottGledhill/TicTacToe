@@ -14,9 +14,11 @@ describe Game do
   end
 
   it 'can rotate turns between players' do
-    game.rotate_turn
-    expect(game.current_turn).to eq 'o'
-    game.rotate_turn
-    expect(game.current_turn).to eq 'x'
+    game1 = double
+    allow(game1).to receive(:current_turn) {'x'}
+    allow(game1).to receive(:rotate_turn) {'o'}
+    game1.rotate_turn
+    allow(game1).to receive(:current_turn) {'o'}
+    expect(game1.current_turn).to eq 'o'
   end
 end
