@@ -1,7 +1,8 @@
 require 'game'
 
 describe Game do
-  subject(:game) {described_class.new}
+
+    subject(:game) {described_class.new}
 
   it 'can initialize the game board' do
     expect(game.board).to eq ["a1", "a2", "a3", "b1", "b2", "b3", "c1", "c2", "c3"]
@@ -46,8 +47,9 @@ describe Game do
   end
 
   it 'can be won' do
-    game.move('a2')
-    game.move('a3')
-    expect(game.move('a1')).to eq 'game won'
+    p game.board
+    game.move('c1')
+    game.move('c2')
+    expect(game.move('c3')).to eq 'game won'
   end
 end

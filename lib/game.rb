@@ -16,8 +16,8 @@ class Game
   def move(move)
     if BOARD.include?(move)
       @board.map! {|e| e == move ? @current_turn : e}
-      board
       rotate_turn
+      game_won?
     else
       raise error
     end
@@ -30,6 +30,10 @@ class Game
 
   private
 
+  def game_won?
+
+  end
+  
   def first_turn
     first_player = [x,o].sample
     @current_turn = first_player.name
