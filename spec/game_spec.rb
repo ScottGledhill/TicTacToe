@@ -13,7 +13,8 @@ describe Game do
     expect(game1.first_turn).to eq 'x goes first'
   end
 
-  # it 'can rotate turns between players' do
-  #   expect(game.rotate_turn).to eq
-  # end
+  it 'can rotate turns between players' do
+    game.rotate_turn
+    expect(game.current_turn).to eq x
+  end
 end
