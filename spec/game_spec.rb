@@ -41,8 +41,13 @@ describe Game do
     expect {game.move('a2')}.to raise_error(RuntimeError, 'Move error')
   end
 
-
   it 'can not move unless it is current turn' do
     expect {game.move('a2')}.to raise_error(RuntimeError, 'Move error')
+  end
+
+  it 'can be won' do
+    game.move('a2')
+    game.move('a3')
+    expect(game.move('a1')).to eq 'game won'
   end
 end
