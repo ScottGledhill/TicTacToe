@@ -7,7 +7,7 @@ describe Game do
     expect(game.board).to eq []
   end
 
-  it 'can choose a player to go first' do
+  it 'can choose a game to go first' do
     game1 = double
     allow(game1).to receive(:first_turn) {'x'}
     expect(game1.first_turn).to eq 'x'
@@ -20,5 +20,24 @@ describe Game do
     game1.rotate_turn
     allow(game1).to receive(:current_turn) {'x'}
     expect(game1.current_turn).to eq 'x'
+  end
+
+  it 'can move' do
+    game.move('a1')
+    expect(game.moves).to eq ['a1']
+  end
+
+  it 'can not move if not within the board' do
+    expect {game.move('d4')}.to raise_error(RuntimeError, 'Move error')
+  end
+
+  it 'cannot move onto a board position already taken' do
+    game.move('a2')
+    expect {game.move('a2')}.to raise_error(RuntimeError, 'Move error')
+  end
+
+  it 'prints current board places occupied by game after each move' do
+    game.move('a2')
+    expect(game.move('c1')).to eq ['a2', 'c1']
   end
 end

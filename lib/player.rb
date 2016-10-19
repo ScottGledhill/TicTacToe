@@ -5,20 +5,5 @@ class Player
 
   def initialize(name)
     @name = name
-    @moves = []
-  end
-
-  def move(move)
-    if BOARD.include?(move) && !moves.include?(move)
-      moves << move
-    else
-      raise error
-    end
-  end
-
-  private
-
-  def error
-    'Move error'
   end
 end
