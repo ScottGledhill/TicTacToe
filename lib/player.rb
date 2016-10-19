@@ -1,7 +1,7 @@
 require 'board'
+
 class Player
-  include Board
-  attr_reader :moves, :name
+  attr_reader :name
 
   def initialize(name)
     @name = name
