@@ -24,7 +24,7 @@ Enter project file;
 
 Run Rspec to see tests
 
-See Demo for game play:
+#Demo for game play:
 ![demo.gif](https://github.com/ScottGledhill/TicTacToe/blob/master/assets/demo.gif)
 
 [Scott Gledhill](https://github.com/ScottGledhill)
