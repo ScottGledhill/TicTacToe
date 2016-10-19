@@ -11,6 +11,11 @@ describe Player do
     expect {player.move('d4')}.to raise_error(RuntimeError, 'please move within the board')
   end
 
+  it 'cannot move onto a board position already taken' do
+    player.move('a2')
+    expect(player.move('a2')).to raise_error(RuntimeError, 'position already taken')
+  end
+
   it 'prints current board places occupied by player after each move' do
     player.move('a2')
     expect(player.move('c1')).to eq ['a2', 'c1']
