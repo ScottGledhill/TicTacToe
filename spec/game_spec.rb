@@ -18,7 +18,7 @@ describe Game do
     allow(game1).to receive(:current_turn) {'x'}
     allow(game1).to receive(:rotate_turn) {'o'}
     game1.rotate_turn
-    allow(game1).to receive(:current_turn) {'o'}
-    expect(game1.current_turn).to eq 'o'
+    allow(game1).to receive(:current_turn) {'x'}
+    expect(game1.current_turn).to eq 'x'
   end
 end
