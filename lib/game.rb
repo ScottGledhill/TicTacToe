@@ -30,10 +30,10 @@ class Game
   private
 
   def game_won?
-    vertical_win? || horizontal_win? || diagonal_win? ? "#{current_turn} won" : false
+    column_win? || row_win? || diagonal_win? ? "#{current_turn} won" : rotate_turn
   end
 
-  def vertical_win?
+  def column_win?
     if board[1] == board[4] && board[4] == board[7] ||
        board[0] == board[3] && board[3] == board[6] ||
        board[1] == board[4] && board[4] == board[7]
@@ -41,7 +41,7 @@ class Game
     end
   end
 
-  def horizontal_win?
+  def row_win?
     if board[0] == board[1] && board[1] == board[2] ||
        board[6] == board[7] && board[7] == board[8] ||
        board[3] == board[4] && board[4] == board[5]
