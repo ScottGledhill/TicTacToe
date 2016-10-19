@@ -1,6 +1,4 @@
-## Practice Tech Test
-
-# The task
+## The task
 
 
 The rules of tic-tac-toe are as follows:
@@ -14,7 +12,7 @@ A game is over if a player wins
 A game is over when all fields are taken
 
 
-# Run it 
+## Run it 
 
 [Download](https://www.ruby-lang.org/en/downloads/) and install ruby if you don't already have it installed.
 
@@ -24,7 +22,7 @@ Enter project file;
 
 Run Rspec to see tests
 
-#Demo
+## Demo
 ![demo.gif](https://github.com/ScottGledhill/TicTacToe/blob/master/assets/demo.gif)
 
 [Scott Gledhill](https://github.com/ScottGledhill)
