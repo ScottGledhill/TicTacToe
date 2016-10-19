@@ -10,4 +10,9 @@ describe Player do
   it 'can not move if not within the board' do
     expect {player.move('d4')}.to raise_error(RuntimeError, 'please move within the board')
   end
+
+  it 'prints current board places occupied by player after each move' do
+    player.move('a2')
+    expect(player.move('c1')).to eq ['a2', 'c1']
+  end
 end
