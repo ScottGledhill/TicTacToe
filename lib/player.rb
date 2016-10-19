@@ -11,7 +11,7 @@ class Player
     if BOARD.include?(move)
       moves << move
     else
-      error
+      raise error
     end
   end
 

@@ -8,6 +8,6 @@ describe Player do
   end
 
   it 'can not move if not within the board' do
-    expect(player.move('d4')).to eq 'please move within the board'
+    expect {player.move('d4')}.to raise_error(RuntimeError, 'please move within the board')
   end
 end
