@@ -6,4 +6,5 @@ describe Game do
   it 'can initialize the game board' do
     expect(game.board).to eq []
   end
+
 end
