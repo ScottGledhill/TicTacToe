@@ -8,14 +8,16 @@ class Player
   end
 
   def move(move)
-    if BOARD.include?(move)
+    if BOARD.include?(move) && !moves.include?(move)
       moves << move
     else
       raise error
     end
   end
 
+  private
+
   def error
-    'please move within the board'
+    'Move error'
   end
 end
